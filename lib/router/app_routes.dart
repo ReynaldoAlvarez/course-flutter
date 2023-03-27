@@ -1,4 +1,5 @@
 import 'package:fl_components/models/models.dart';
+import 'package:fl_components/screen/card_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_components/screen/screen.dart';
 
@@ -19,7 +20,12 @@ class AppRoutes {
         route: 'alert',
         name: 'Alert',
         screen: const AlterScreen(),
-        icon: Icons.add_alert)
+        icon: Icons.add_alert),
+    MenuOption(
+        route: 'card',
+        icon: Icons.card_giftcard,
+        name: 'Card',
+        screen: const CardScreen())
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
