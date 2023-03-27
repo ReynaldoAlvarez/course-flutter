@@ -1,3 +1,6 @@
+import 'dart:collection';
+
+import 'package:fl_components/router/app_routes.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,12 +15,14 @@ class HomeScreen extends StatelessWidget {
         ),
         body: ListView.separated(
             itemBuilder: (context, index) => ListTile(
-                leading: const Icon(Icons.access_time_outlined),
-                title: const Text('Nombre De la Ruta'),
+                leading: Icon(AppRoutes.menuOptions[index].icon,
+                    color: Colors.indigo),
+                title: Text(AppRoutes.menuOptions[index].name),
                 onTap: () {
-                  Navigator.pushNamed(context, 'list1');
+                  Navigator.pushNamed(
+                      context, AppRoutes.menuOptions[index].route);
                 }),
             separatorBuilder: (_, __) => const Divider(),
-            itemCount: 20));
+            itemCount: AppRoutes.menuOptions.length));
   }
 }
