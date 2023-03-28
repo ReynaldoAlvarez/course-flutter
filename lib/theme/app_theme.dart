@@ -4,13 +4,23 @@ class AppTheme {
   static Color primary = Colors.red.shade300;
 
   static final ThemeData lightTheme = ThemeData.light().copyWith(
-      primaryColor: Colors.red.shade300,
-      appBarTheme: AppBarTheme(
-        color: primary,
-        elevation: 0,
-      ),
-      textButtonTheme:
-          TextButtonThemeData(style: TextButton.styleFrom(primary: primary)));
+    primaryColor: Colors.red.shade300,
+    appBarTheme: AppBarTheme(
+      color: primary,
+      elevation: 0,
+    ),
+    textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(backgroundColor: primary)),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: primary,
+      elevation: 0,
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+            backgroundColor: primary,
+            shape: const StadiumBorder(),
+            elevation: 0)),
+  );
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
     primaryColor: Colors.red.shade300,
@@ -20,5 +30,4 @@ class AppTheme {
     ),
     scaffoldBackgroundColor: Colors.black,
   );
-  // TextButton Theme
 }
