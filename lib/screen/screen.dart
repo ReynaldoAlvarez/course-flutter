@@ -1,3 +1,5 @@
+export 'package:fl_components/screen/inputs_screen.dart';
+
 export 'package:fl_components/screen/animated_screen.dart';
 
 export 'package:fl_components/screen/avatar_screen.dart';
